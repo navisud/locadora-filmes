@@ -5,8 +5,8 @@ import com.locadora.Gerente;
 public class Main {
 
     public static void main(String[] args) {
-        Gerente.cadastrarCliente();
-        //Gerente.cadastrarFilme();
+//        Gerente.cadastrarCliente(); funcionando!!!
+        Gerente.cadastrarFilme();
     }
 
 }

@@ -8,7 +8,7 @@ public class Gerente {
         Scanner ler = new Scanner(System.in);
         int loop = 1;
 
-        while(loop == 1) {
+        while(true) {
             System.out.println("Insira o nome do filme");
             String nome = ler.nextLine();
 
@@ -21,20 +21,35 @@ public class Gerente {
             System.out.println("O filme foi alugado?\n1 para sim, 0 para não");
             int alugado = ler.nextInt();
 
-            System.out.println("\nO nome do filme é {"+nome+"}, sua duração é {"+duracao+"}, seu preço é R${"+preco+"}reais, está alugado: {"+alugado+"}");
-
-            loop = ler.nextInt();System.out.println("\nSe as informações estiverem corretas insira 0 para continuar ou 1 para voltar...");
-
-            if (alugado == 1) {
-                boolean aluguel = true;
-                Filme filme = new Filme(nome, duracao, preco, aluguel);
-            } else if (alugado == 0) {
-                boolean aluguel = false;
-                Filme filme = new Filme(nome, duracao, preco, aluguel);
+            if (alugado == 1){
+                String a = "Sim";
+                System.out.println("\nNome do Filme: "+nome+",\nDuração: "+duracao+" minutos,\nPreço: R$"+preco+" reais,\nAlugado: "+a);
             } else {
-                System.out.println("Erro! Informe apenas 0 ou 1 para continuar!");
-                // tratar exception de erro
+                String a = "Não";
+                System.out.println("\nNome do Filme: "+nome+",\nDuração: "+duracao+" minutos,\nPreço: R$"+preco+" reais,\nAlugado: "+a);
             }
+
+            System.out.println("\nSe as informações estiverem corretas digite 0 para continuar ou 1 para voltar...");
+            int teste = ler.nextInt();
+
+            if (teste == 0){
+                if (alugado == 1) {
+                    boolean aluguel = true;
+                    Filme filme = new Filme(nome, duracao, preco, aluguel);
+                } else if (alugado == 0) {
+                    boolean aluguel = false;
+                    Filme filme = new Filme(nome, duracao, preco, aluguel);
+                } else {
+                    System.out.println("\nErro! Informe apenas 0 ou 1 para continuar!");
+                    // tratar exception de erro
+                }
+                System.out.println("\nFilme cadastrado com sucesso!\nSaindo...");
+                break;
+            }else{
+                ler.nextLine();
+                continue;
+            }
+
         }
     }
     public static void cadastrarCliente() {
