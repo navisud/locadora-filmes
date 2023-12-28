@@ -1,5 +1,7 @@
 package com.locadora;
 
+import java.util.Scanner;
+
 public class Cliente {
     public String nome;
     private String cpf;

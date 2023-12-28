@@ -1,12 +1,12 @@
 import com.locadora.Cliente;
 import com.locadora.Filme;
+import com.locadora.Gerente;
 
 public class Main {
 
     public static void main(String[] args) {
-        Filme filme1 = new Filme("Barbie", 114F,19.99F,false);
-        Cliente cliente1 = new Cliente("Lucas", "123456", "(16)99125049","Rua Tamandua");
-
-
+        Gerente.cadastrarCliente();
+        Gerente.cadastrarFilme();
     }
+
 }

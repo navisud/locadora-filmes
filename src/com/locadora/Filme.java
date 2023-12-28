@@ -1,6 +1,6 @@
 package com.locadora;
 
-import java.util.Calendar;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Filme {
@@ -8,13 +8,13 @@ public class Filme {
     public float duracao;
     public float preco;
     public boolean alugado = false;
-    public Calendar devolucao;
+    public LocalDate devolucao;
 
-    public Calendar getDevolucao() {
+    public LocalDate getDevolucao() {
         return devolucao;
     }
 
-    public void setDevolucao(Calendar devolucao) {
+    public void setDevolucao(LocalDate devolucao) {
         this.devolucao = devolucao;
     }
 
