@@ -1,7 +1,6 @@
 package com.locadora;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Filme {
     public String titulo;
@@ -16,6 +15,30 @@ public class Filme {
 
     public void setDevolucao(LocalDate devolucao) {
         this.devolucao = devolucao;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
+
+    public boolean isAlugado() {
+        return alugado;
+    }
+
+    public void setAlugado(boolean alugado) {
+        this.alugado = alugado;
     }
 
     public Filme(String titulo, float duracao, float preco, boolean alugado) {

@@ -55,4 +55,13 @@ public class Cliente {
         this.telefone = telefone;
         this.endereco = endereco;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", endereco='" + endereco + '\'';
+    }
 }
