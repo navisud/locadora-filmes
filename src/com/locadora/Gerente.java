@@ -40,28 +40,31 @@ public class Gerente {
     public static void cadastrarCliente() {
         Scanner ler = new Scanner(System.in);
 
-        int loop = 1;
-
-        while(loop == 1) {
+        while(true) {
             System.out.println("Insira seu nome: ");
-            String nome = ler.next();
+            String nome = ler.nextLine();
+            ler.nextLine();
 
             System.out.println("Insira seu cpf:");
-            String cpf = ler.nextLine();
+            String cpf = ler.next();
 
             System.out.println("Insira seu telefone:");
-            String tel = ler.nextLine();
+            String tel = ler.next();
+            ler.nextLine();
 
             System.out.println("Insira seu endereço:");
             String endereco = ler.nextLine();
 
-            System.out.println("\nSeu nome é {"+nome+"}, seu cpf é {"+cpf+"}, seu telefone é {"+tel+"}, seu endereco é {"+endereco+"}");
+            System.out.println("\nNome: "+nome+",\nCPF: "+cpf+",\nTelefone: "+tel+",\nEndereço: "+endereco);
 
             System.out.println("\nSe as informações estiverem corretas insira 0 para continuar ou 1 para voltar...");
-            loop = ler.nextInt();
+            int loop = ler.nextInt();
+            ler.nextLine();
 
             if (loop == 0) {
                 Cliente cliente = new Cliente(nome, cpf, tel, endereco);
+                System.out.println("\nCliente cadastrado com sucesso!\nSaindo...");
+                break;
             } else{
                 loop = 1;
             }

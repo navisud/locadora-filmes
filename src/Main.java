@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Gerente.cadastrarCliente();
-        Gerente.cadastrarFilme();
+        //Gerente.cadastrarFilme();
     }
 
 }
