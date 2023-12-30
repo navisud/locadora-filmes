@@ -175,4 +175,73 @@ public class Gerente {
             }
         }
     }
+
+    public static void editarCliente(Cliente cli){
+        String nome, cpf, tel, endereco;
+
+        Scanner ler = new Scanner(System.in);
+
+        while(true) {
+            // menu
+            System.out.println("\n|-------| MENU |-------|");
+            System.out.println("| 1 - Editar Nome      |");
+            System.out.println("| 2 - Editar Cpf       |");
+            System.out.println("| 3 - Editar Telefone  |");
+            System.out.println("| 4 - Editar Endereço  |");
+            System.out.println("| 5 - Todos os dados   |");
+            System.out.println("|----------------------|");
+            int menu = ler.nextInt();
+
+            switch (menu) {
+                case 1: {
+                    ler.nextLine();
+                    System.out.println("Insira o novo nome:");
+                    nome = ler.nextLine();
+                    cli.setNome(nome);
+                    System.out.println("\nO novo nome é: "+cli.getNome());
+                    break;
+                }
+                case 2: {
+                    ler.nextLine();
+                    System.out.println("Insira o novo cpf:");
+                    cpf = ler.nextLine();
+                    cli.setCpf(cpf);
+                    System.out.println("\nO novo cpf é: "+cli.getCpf());
+                    break;
+                }
+                case 3: {
+                    ler.nextLine();
+                    System.out.println("Insira o novo telefone:");
+                    tel = ler.nextLine();
+                    cli.setTelefone(tel);
+                    System.out.println("\nO novo telefone é: "+cli.getTelefone());
+                    break;
+                }
+                case 4: {
+                    ler.nextLine();
+                    System.out.println("Insira o novo endereço:");
+                    endereco = ler.nextLine();
+                    cli.setEndereco(endereco);
+                    System.out.println("\nO novo endereço é: "+cli.getEndereco());
+                    break;
+                }
+                case 5:{
+                    System.out.println("\nSeus novos dados são:");
+                    System.out.println("\nNome: "+cli.getNome()+",");
+                    System.out.println("CPF: "+cli.getCpf()+",");
+                    System.out.println("Telefone: "+cli.getTelefone()+",");
+                    System.out.println("Endereço: "+cli.getEndereco()+",");
+
+                }
+            }
+
+            System.out.println("\nDigite 0 para sair e 1 para voltar...");
+            int n = ler.nextInt();
+
+            if (n == 0){
+                System.out.println("\nSaindo...");
+                break;
+            }
+        }
+    }
 }

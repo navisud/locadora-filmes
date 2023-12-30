@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        //Cliente cliente = Gerente.cadastrarCliente();
+        Cliente cliente = Gerente.cadastrarCliente();
+        //Gerente.editarCliente(cliente);
         //Gerente.consultarCliente(cliente);
 
         //Filme filme = Gerente.cadastrarFilme();
