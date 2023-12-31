@@ -3,7 +3,7 @@ package com.locadora;
 import java.util.Scanner;
 
 public class Gerente {
-    // adicionar metódos set para editar os filmes
+    // adicionar metódos delete para deletear os filmes e usuários
     public static Filme cadastrarFilme() {
         //cadastrar filme funcionando
         String nome;
@@ -78,6 +78,71 @@ public class Gerente {
                 case 3: {
                     System.out.println("\n" + filme.isAlugado());
                     break;
+                }
+            }
+
+            System.out.println("\nDigite 0 para sair e 1 para voltar...");
+            int n = ler.nextInt();
+
+            if (n == 0){
+                System.out.println("\nSaindo...");
+                break;
+            }
+        }
+    }
+
+    public static void editarFilme(Filme filme){
+        String nome;
+        float preco;
+        int alugado;
+
+
+        Scanner ler = new Scanner(System.in);
+
+        while(true) {
+            // menu
+            System.out.println("\n|-------| MENU |-------|");
+            System.out.println("| 1 - Editar Título    |");
+            System.out.println("| 2 - Editar Preço     |");
+            System.out.println("| 3 - Editar Aluguel   |");
+            System.out.println("| 4 - Todos os dados   |");
+            System.out.println("|----------------------|");
+            int menu = ler.nextInt();
+
+            switch (menu) {
+                case 1: {
+                    ler.nextLine();
+                    System.out.println("Insira o novo título:");
+                    nome = ler.nextLine();
+                    filme.setTitulo(nome);
+                    System.out.println("\nO novo título é: "+filme.getTitulo());
+                    break;
+                }
+                case 2: {
+                    ler.nextLine();
+                    System.out.println("Insira o novo preço:");
+                    preco = ler.nextFloat();
+                    filme.setPreco(preco);
+                    System.out.println("\nO novo preço é: R$"+filme.getPreco()+" reais");
+                    break;
+                }
+                case 3: {
+                    ler.nextLine();
+                    System.out.println("Insira 1 para alugado e 0 para não alugado:");
+                    alugado = ler.nextInt();
+                        if (alugado == 1){
+                            filme.setAlugado(true);
+                        } else{
+                            filme.setAlugado(false);
+                        }
+                    System.out.println("\nEstá alugado?: "+filme.isAlugado());
+                    break;
+                }
+                case 4: {
+                    System.out.println("\nNovos dados do filme:");
+                    System.out.println("\nTítulo: "+filme.getTitulo()+",");
+                    System.out.println("Preço: R$"+filme.getPreco()+",");
+                    System.out.println("Alugado?: "+filme.isAlugado()+",");
                 }
             }
 
