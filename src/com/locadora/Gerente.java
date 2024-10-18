@@ -27,11 +27,11 @@ public class Gerente {
             alugado = ler.nextInt();
 
             if (alugado == 1) {
-                String a = "Sim";
-                System.out.println("\nNome do Filme: " + nome + ",\nDuração: " + duracao + " minutos,\nPreço: R$" + preco + " reais,\nAlugado: " + a);
+                String alug = "Sim";
+                System.out.println("\nNome do Filme: " + nome + ",\nDuração: " + duracao + " minutos,\nPreço: R$" + preco + " reais,\nAlugado: " + alug);
             } else {
-                String a = "Não";
-                System.out.println("\nNome do Filme: " + nome + ",\nDuração: " + duracao + " minutos,\nPreço: R$" + preco + " reais,\nAlugado: " + a);
+                String alug = "Não";
+                System.out.println("\nNome do Filme: " + nome + ",\nDuração: " + duracao + " minutos,\nPreço: R$" + preco + " reais,\nAlugado: " + alug);
             }
             // fazer tratamendo da Exception e verificação aqui
 
@@ -43,7 +43,6 @@ public class Gerente {
                 break;
             } else {
                 ler.nextLine();
-                continue;
             }
         }
 
@@ -63,6 +62,7 @@ public class Gerente {
             System.out.println("| 1 - Consulta Nome      |");
             System.out.println("| 2 - Consulta Preço     |");
             System.out.println("| 3 - Consulta Aluguel   |");
+            System.out.println("| 4 - Sair do Menu       |");
             System.out.println("|------------------------|");
             int menu = ler.nextInt();
 
@@ -79,9 +79,13 @@ public class Gerente {
                     System.out.println("\n" + filme.isAlugado());
                     break;
                 }
+                case 4: {
+                    System.out.println("\nSaindo do menu...");
+                    break;
+                }
             }
 
-            System.out.println("\nDigite 0 para sair e 1 para voltar...");
+            System.out.println("\nDigite 0 para sair novamente ou 1 para voltar...");
             int n = ler.nextInt();
 
             if (n == 0){
@@ -106,6 +110,7 @@ public class Gerente {
             System.out.println("| 2 - Editar Preço     |");
             System.out.println("| 3 - Editar Aluguel   |");
             System.out.println("| 4 - Todos os dados   |");
+            System.out.println("| 5 - Sair do menu     |");
             System.out.println("|----------------------|");
             int menu = ler.nextInt();
 
@@ -144,9 +149,13 @@ public class Gerente {
                     System.out.println("Preço: R$"+filme.getPreco()+",");
                     System.out.println("Alugado?: "+filme.isAlugado()+",");
                 }
+                case 5: {
+                    System.out.println("\nSaindo do menu...");
+                    break;
+                }
             }
 
-            System.out.println("\nDigite 0 para sair e 1 para voltar...");
+            System.out.println("\nDigite 0 para sair novamente ou 1 para voltar...");
             int n = ler.nextInt();
 
             if (n == 0){
@@ -164,10 +173,10 @@ public class Gerente {
         while (true) {
             System.out.println("Insira seu nome: ");
             nome = ler.nextLine();
-            ler.nextLine();
 
             System.out.println("Insira seu cpf:");
             cpf = ler.next();
+            ler.nextLine();
 
             System.out.println("Insira seu telefone:");
             tel = ler.next();
@@ -205,6 +214,7 @@ public class Gerente {
             System.out.println("| 3 - Consulta Telefone  |");
             System.out.println("| 4 - Consulta Endereço  |");
             System.out.println("| 5 - Consulta Filme     |");
+            System.out.println("| 0 - Sair do Menu       |");
             System.out.println("|------------------------|");
             int menu = ler.nextInt();
 
@@ -229,9 +239,13 @@ public class Gerente {
                     System.out.println("\n" + cli.getFilme());
                     break;
                 }
+                case 6:{
+                    System.out.println("\nSaindo do menu...");
+                    break;
+                }
             }
 
-            System.out.println("\nDigite 0 para sair e 1 para voltar...");
+            System.out.println("\nDigite 0 para sair novamente ou 1 para voltar...");
             int n = ler.nextInt();
 
             if (n == 0){
@@ -254,6 +268,7 @@ public class Gerente {
             System.out.println("| 3 - Editar Telefone  |");
             System.out.println("| 4 - Editar Endereço  |");
             System.out.println("| 5 - Todos os dados   |");
+            System.out.println("| 0 - Sair do Menu     |");
             System.out.println("|----------------------|");
             int menu = ler.nextInt();
 
@@ -298,9 +313,12 @@ public class Gerente {
                     System.out.println("Endereço: "+cli.getEndereco()+",");
 
                 }
+                case 0:{
+                    System.out.println("Saindo do menu...");
+                }
             }
 
-            System.out.println("\nDigite 0 para sair e 1 para voltar...");
+            System.out.println("\nDigite 0 para sair novamente e 1 para voltar...");
             int n = ler.nextInt();
 
             if (n == 0){
